@@ -13,6 +13,7 @@
         <li><a class="{{request()->routeIs('home')?'active':''}}"  href="{{ route('home')}}">Home</a></li>
         <li><a class="{{request()->routeIs('about')?'active':''}}"  href="{{ route('about')}}">About</a></li>
         <li><a class="{{request()->routeIs('posts.create')?'active':''}}"  href="{{ route('posts.create')}}">Create Post</a></li>
+        <li><a class="{{request()->routeIs('catagory.index')?'active':''}}"  href="{{ route('catagory.index')}}">Catagory</a></li>
     </ul>
 
     @includeWhen($errors->any(), '_error')

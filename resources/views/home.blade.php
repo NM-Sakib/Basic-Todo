@@ -19,9 +19,9 @@
             </thead> 
             <tbody>
                 {{-- @dd($posts); --}}
-                @forelse ($posts as $item)
+                @forelse ($posts as $key => $item)
                 <tr>
-                    <td>{{$item->id}}</th>
+                    <td>{{$key+1}}</th>
                     <td>{{$item->title}}</td>
                     <td>{{$item->description}}</td>
                     <td>{{$item->created_at}}</td>

@@ -30,7 +30,7 @@ class PostController extends Controller
         //dd($request->all());
 
         $request->validate([
-            'title' => 'required',
+            'title' => ['required','string','min:5'],
             'description' => ['required', 'min:10'],
         ]);
 
@@ -88,12 +88,7 @@ class PostController extends Controller
          ->with('success', 'Post updated! Title: ' . $post->title . ' Description: ' . $post->description);
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+   
     public function destroy($id)
     {
         $kamu = Post::find($id);

@@ -9,7 +9,7 @@
     @csrf
 
     <label>Title</label>
-    <input class="@error('title') error-border @enderror" type="text" name="title" value="{{old('title')}}">
+    <input class="@error('title') error-border @enderror" type="text" name="title" value="">
     @error('title')
         <div class="error">
             {{ $message }}

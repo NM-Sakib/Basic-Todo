@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CatagoryController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PostController;
 use Illuminate\Support\Facades\Route;
@@ -22,7 +23,11 @@ Route::PUT('posts/update/{post}', [PostController::class,'update'])->name('posts
 
 Route::get('posts/{id}', [PostController::class,'destroy'])->name('posts.destroy');
 
-// Route::resource('posts', PostController::class)->except([
-//     'index'   //we can use except or only
-// ]);
+Route::get('catagory',[CatagoryController::class,'index'])->name('catagory.index');
+
+Route::get('catagory/create',[CatagoryController::class,'create'])->name('catagory.create');
+
+Route::POST('catagory/store',[CatagoryController::class,'store'])->name('catagory.store');
+
+Route::get('catagory/edit/{catagory}', [CatagoryController::class,'edit'])->name('catagory.edit');
 
