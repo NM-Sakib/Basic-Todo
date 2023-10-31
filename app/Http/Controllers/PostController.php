@@ -95,5 +95,6 @@ class PostController extends Controller
         $kamu->delete();
         return redirect()
             ->route('home');
+            //hello
     }
 }
